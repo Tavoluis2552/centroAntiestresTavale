@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Académico Antiestrés</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Imagenes/LogoTavale.png" alt="Logo del Centro Académico Antiestrés" class="logo">
+        <h1>Centro Académico Antiestrés</h1>
+        <p>Un espacio dedicado al bienestar mental y físico de estudiantes y universitarios.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="servicios">
+        <h2>Servicios que Brindamos</h2>
+        <div class="servicio fade-in">
+            <h3>Asesoramiento Individualizado</h3>
+            <img src="Imagenes/AsesoramientoIndividualizado.jpg" alt="Asesoramiento Individualizado" class="servicio-imagen">
+            <p>Sesiones personalizadas con terapeutas licenciados para abordar tus necesidades específicas.</p>
+        </div>
+        <div class="servicio fade-in">
+            <h3>Grupos de Apoyo</h3>
+            <img src="Imagenes/GrupoApoyo.jpg" alt="Grupos de Apoyo" class="servicio-imagen">
+            <p>Reuniones grupales para compartir experiencias y fortalecer la comunidad.</p>
+        </div>
+        <div class="servicio fade-in">
+            <h3>Talleres de Relajación</h3>
+            <img src="Imagenes/TallerRelajacion.jpg" alt="Talleres de Relajación" class="servicio-imagen">
+            <p>Talleres que incluyen técnicas de respiración y meditación para reducir el estrés.</p>
+        </div>
+        <div class="servicio fade-in">
+            <h3>Yoga y Meditación</h3>
+            <img src="Imagenes/Yoga.jpg" alt="Yoga y Meditación" class="servicio-imagen">
+            <p>Clases de yoga y meditación para mejorar la concentración y la paz interior.</p>
+        </div>
+    </section>
+
+    <section id="beneficios">
+        <h2>Beneficios del Centro</h2>
+        <ul class="fade-in">
+            <li>Reducción del estrés y la ansiedad.</li>
+            <li>Mejora del bienestar mental y emocional.</li>
+            <li>Fomento de la salud física a través de actividades dinámicas.</li>
+            <li>Desarrollo personal y crecimiento integral.</li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos a través de:</p>
+        <ul class="fade-in">
+            <li>Email: info@centroantiestrés.com</li>
+            <li>Teléfono: +51 987 654 321</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Creado por Rojas Cruz Miriel Alexandra 😀</p>
+        <p>Estudiante de Noveno Ciclo de Psicología Ψ</p>
+        <p>Universidad César Vallejo de Piura 🏫</p>
+        <p>Piura - Perú 🇵🇪</p>
+        <p>&copy; 2024 Centro Académico Antiestrés. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para detectar scroll y aplicar animación
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            const viewportHeight = window.innerHeight;
+
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                if (position < viewportHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        });
+
+        // Suavizar el scroll entre secciones
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.servicio {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: white;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.servicio img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo {
+    width: 100px; /* Establece un ancho fijo de 100 píxeles */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Hace que la imagen se comporte como un bloque */
+    margin: 0 auto 20px; /* Centra el logo y añade margen inferior */
+}
+
+.servicio-imagen {
+    width: 150px; /* Establece el ancho deseado */
+    height: 100px; /* Establece la altura deseada */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    display: block; /* Comportamiento de bloque */
+    margin: 0 auto 10px; /* Centra la imagen y añade margen inferior */
+}
